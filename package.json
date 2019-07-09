@@ -15,7 +15,8 @@
     "moment": "^2.12.0",
     "resolve": "^1.0.0",
     "umzug": "^1.9.1",
-    "yargs": "^4.2.0"
+    "yargs": "^4.2.0",
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "coffee-script": "^1.9.0",
@@ -37,7 +38,9 @@
     "through2": "^2.0.1"
   },
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -55,5 +58,6 @@
   "homepage": "https://github.com/sequelize/cli",
   "bin": {
     "sequelize": "bin/sequelize"
-  }
+  },
+  "snyk": true
 }
